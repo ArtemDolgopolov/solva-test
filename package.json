@@ -12,10 +12,13 @@
   "pre-push": "jest"
  },
  "dependencies": {
+  "@hookform/resolvers": "^3.3.2",
   "firebase": "^10.7.1",
   "react": "^18.2.0",
   "react-dom": "^18.2.0",
-  "react-hook-form": "^7.49.0"
+  "react-hook-form": "^7.49.0",
+  "react-toastify": "^9.1.3",
+  "yup": "^1.3.2"
  },
  "devDependencies": {
   "@babel/core": "^7.23.5",

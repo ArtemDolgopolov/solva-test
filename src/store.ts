@@ -3,9 +3,10 @@ import {
  combineReducers,
  configureStore
 } from '@reduxjs/toolkit';
+import projectReducer from './features/projectSlice'
 
 const rootReducer = combineReducers({
- // reducers go here
+  project: projectReducer
 });
 
 export function setupStore(preloadedState?: PreloadedState<RootState>) {

@@ -1,0 +1,39 @@
+{
+ "welcomeHeader": "Welcome",
+ "mainPage": "Main page",
+ "signIn": "Sign In",
+ "signUp": "Sign Up",
+ "email": "Email",
+ "password": "Password",
+ "enterYourEmail": "Enter your email",
+ "enterYourPassword": "Enter your password",
+ "confirmPassword": "Confirm password",
+ "confirmYourPassword": "Confirm your password",
+ "noUserFound": "No user was found with the provided data!",
+ "signInButton": "Sign In",
+ "signUpButton": "Sign Up",
+ "dontHaveAccount": "Don't have an account yet?",
+ "alreadyHaveAccount": "Already have an account?",
+ "registerHere": "Register here!",
+ "requiredField": "Required field!",
+ "incorrectEmail": "Incorrect email! (e.g. example@gmail.com)",
+ "uppercaseLetter": "Must contain at least one uppercase letter!",
+ "lowercaseLetter": "Must contain at least one lowercase letter!",
+ "atLeastOneDigit": "Must contain at least one digit!",
+ "atLeast8Characters": "Must be at least 8 characters long!",
+ "atLeastOneSpecialCharacter": "Must contain at least 1 special character!",
+ 
+
+ "title404": "Sorry, but page you're requested doesn't exists.",
+ "text404": "Click button below for proceed to the Home page.",
+ "button404": "Back Home",
+
+ "titleError": "AN UNKNOWN ERROR HAS OCCURRED",
+ "textError": "Please, proceed to the main page.",
+
+ "toastSuccessSignUp": "Success! Now you can use the SWAPI app!",
+ "toastSuccessSignIn": "Welcome back, we missed you!",
+ "toastSuccessLogout": "Successful log out.",
+ "toastErrorLogout": "Error on account log out!",
+ "toastErrorSignUp": "Error on account sign up!"
+}

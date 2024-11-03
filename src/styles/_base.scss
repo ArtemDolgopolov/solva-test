@@ -2,13 +2,99 @@
  margin: 0;
  box-sizing: border-box;
 }
+
+// ---- toastify
+
+:root {
+ --toastify-color-success: #e535ab;
+ --toastify-color-warning: #f1c40f;
+ --toastify-color-error: #e74c3c;
+ --toastify-color-light: #fff;
+ --toastify-color-dark: #2e3445;
+ --toastify-font-family: 'Roboto Slab', serif;
+ --toastify-color-info: #dbcd34;
+ --toastify-color-transparent: rgba(255, 255, 255, 0.7);
+}
+
+.Toastify {
+ font-size: 0.8em;
+}
+
+// --------
+
 html {
  height: 100%;
  font-family: $font;
- font-size: 1.5rem;
+ font-size: $font-size-regular;
 }
+
 body {
  height: 100%;
+ color: $font-color;
+ background-color: $body-background;
+}
+
+#root {
+ display: flex;
+ flex-direction: column;
+ height: 100%;
+}
+
+.main {
+ display: flex;
+ flex-direction: column;
+ height: 100%;
+}
+
+section {
+ padding: 1.5rem;
+}
+
+footer {
+ background-color: $body-background;
  color: #fff;
- background-color: #242424;
+ padding: 1.5rem 0;
+}
+
+a {
+ text-decoration: none;
+}
+
+button {
+ border-radius: 8px;
+ border: 1px solid transparent;
+ padding: 0.6em 1.2em;
+ font-weight: 500;
+ color: $font-color;
+ font-family: inherit;
+ background-color: $secondary-color-dim;
+ cursor: pointer;
+ transition: border-color 0.25s;
+}
+
+button:hover {
+ border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+ outline: 4px auto -webkit-focus-ring-color;
+}
+
+::-webkit-scrollbar {
+ width: 0.25em;
+}
+
+::-webkit-scrollbar-track {
+ background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+ background-color: transparent;
+ transition: background-color 1s ease;
+}
+
+:hover::-webkit-scrollbar-thumb {
+ background-color: gray;
+ cursor: pointer;
 }
