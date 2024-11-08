@@ -1,0 +1,10 @@
+.pagination_wrapper {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+
+  .pagination_span {
+    display: flex;
+    align-items: center;
+  }
+}
