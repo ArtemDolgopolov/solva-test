@@ -12,6 +12,7 @@ import Auth from './pages/auth/Auth'
 import Characters from './pages/Characters/Characters'
 import { Provider } from 'react-redux'
 import { setupStore } from './store'
+import DetailedCard from './pages/DetailedCard/DetailedCard';
 
 const store = setupStore()
 
@@ -24,6 +25,14 @@ const router = createBrowserRouter(
        element={
          <PrivateRoute redirectTo="/auth" isReversedDirection={true}>
            <Characters />
+         </PrivateRoute>
+       }
+     />
+     <Route
+       path="/characters/:id"
+       element={
+         <PrivateRoute redirectTo="/auth" isReversedDirection={true}>
+           <DetailedCard />
          </PrivateRoute>
        }
      />
