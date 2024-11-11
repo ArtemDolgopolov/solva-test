@@ -44,6 +44,14 @@ body {
  display: flex;
  flex-direction: column;
  height: 100%;
+
+ @media only screen and (min-width: $mobile) {
+   height: 575%;
+ }
+
+  @media only screen and (min-width: $tablet) and (max-width: $fhd) {
+    height: 318%;
+  }
 }
 
 section {
@@ -52,7 +60,6 @@ section {
 
 footer {
  background-color: $body-background;
- color: #fff;
  padding: 1.5rem 0;
 }
 

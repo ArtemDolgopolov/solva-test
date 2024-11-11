@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import Header from '../../components/Header/Header';
-// import Footer from '../Footer/Footer';
+import Footer from '../../components/Footer/Footer';
 import { getUserAuthStatus } from '../../features/projectSlice';
 import { useAppDispatch } from '../../hooks/appHooks';
 import { Suspense, useEffect } from 'react';
@@ -23,7 +23,7 @@ export default function Main() {
           <Outlet />
         </Suspense>
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

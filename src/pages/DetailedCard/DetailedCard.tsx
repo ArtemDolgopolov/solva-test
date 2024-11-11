@@ -38,6 +38,7 @@ export default function DetailedCard() {
   const [isEditing, setIsEditing] = useState(false)
   const { register, handleSubmit, reset } = useForm<CharacterForm>()
   const [user, setUser] = useState<User | null>(null)
+  const [isFetching, setIsFetching] = useState(true)
 
   const thisCard = characters.find((character: CharacterData) => character.url.match(/\/(\d+)\/$/)?.[1] === id)
 
@@ -81,10 +82,11 @@ export default function DetailedCard() {
   
   useEffect(() => {
     const storedData = user ? loadFromLocalStorage(user) : null
-    setCharacterData(storedData || thisCard || characterDetails);
+    setCharacterData(storedData || thisCard || characterDetails)
+    setIsFetching(false)
   }, [thisCard, characterDetails, user]);
 
-  if (isLoading) return <Loader />
+  if (isLoading || isFetching) return <Loader />
   if (!characterData) return <p>Character not found</p>
 
   const onSubmit = (data: CharacterForm) => {
