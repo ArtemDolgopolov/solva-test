@@ -18,8 +18,6 @@ export default function PrivateRoute({
     isRedirectionRequired({ isUserSignIn, isReversedDirection });
 
   useEffect(() => {
-    console.log("isUserSignIn:", isUserSignIn);
-    console.log("isRedirected:", isRedirected);
     if (isRedirected) {
       navigate(redirectTo);
     }

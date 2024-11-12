@@ -3,18 +3,18 @@ import { ContextProps, PlaceholderKeys } from '../../types'
 import placeholders from '../../utils/placeholders.json'
 
 interface PlaceholderContextProps {
-  t: (key: PlaceholderKeys) => string
+ addPlaceholder: (key: PlaceholderKeys) => string
 }
 
 export const AppContext = createContext<PlaceholderContextProps | undefined>(undefined);
 
 export function AppContextProvider({ children }: ContextProps) {
-  const t = (key: PlaceholderKeys) => {
+  const addPlaceholder = (key: PlaceholderKeys) => {
     return placeholders[key] || key
   };
 
   return (
-    <AppContext.Provider value={{ t }}>
+    <AppContext.Provider value={{ addPlaceholder }}>
       {children}
     </AppContext.Provider>
   );

@@ -10,7 +10,7 @@ import { emitNotification, formatDisplayedName } from "../../utils/helpers"
 export default function UserIcons() {
  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false)
  const [currentUser, setCurrentUser] = useState<string | null>(null)
- const { t } = usePlaceholdersContext()
+ const { addPlaceholder } = usePlaceholdersContext()
  const dispatch = useAppDispatch();
 
  const navigate = useNavigate()
@@ -32,10 +32,10 @@ export default function UserIcons() {
    try {
     await auth.signOut()
     dispatch(updateUserStatus(false))
-    emitNotification('success', t('toastSuccessLogout'))
+    emitNotification('success', addPlaceholder('toastSuccessLogout'))
     navigate('/')
    } catch {
-    emitNotification('error', t('toastErrorLogout'))
+    emitNotification('error', addPlaceholder('toastErrorLogout'))
    }
  }
 

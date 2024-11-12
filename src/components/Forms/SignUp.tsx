@@ -23,7 +23,7 @@ export default function SignUp() {
   )
   const [isLoading, setIsLoading] = useState(false)
 
-  const { t } = usePlaceholdersContext()
+  const { addPlaceholder } = usePlaceholdersContext()
 
   const dispatch = useDispatch()
 
@@ -63,7 +63,7 @@ export default function SignUp() {
       await createUserWithEmailAndPassword(auth, email, password)
       dispatch(updateUserStatus(true))
       setFirebaseErrors(null)
-      emitNotification('success', t('toastSuccessSignUp'))
+      emitNotification('success', addPlaceholder('toastSuccessSignUp'))
       navigate('/')
     } catch (e) {
       if (e instanceof FirebaseError) {
@@ -82,13 +82,13 @@ export default function SignUp() {
 
   return (
     <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
-      <h2 className={classes.form_heading}>{t('signUp')}</h2>
+      <h2 className={classes.form_heading}>{addPlaceholder('signUp')}</h2>
       <div className={classes.input_container}>
-        <label htmlFor="email">{t('email')}</label>
+        <label htmlFor="email">{addPlaceholder('email')}</label>
         <input
           id="email"
           {...register('email')}
-          placeholder={t('enterYourEmail')}
+          placeholder={addPlaceholder('enterYourEmail')}
           className={`${classes.input} ${
             (errors.email || isAuthError()) && classes.error_border
           }`}
@@ -104,11 +104,11 @@ export default function SignUp() {
         )}
       </div>
       <div className={classes.input_container}>
-        <label htmlFor="password">{t('password')}</label>
+        <label htmlFor="password">{addPlaceholder('password')}</label>
         <input
           id="password"
           type="password"
-          placeholder={t('enterYourPassword')}
+          placeholder={addPlaceholder('enterYourPassword')}
           {...register('password')}
           className={`${classes.input} ${
             errors.password && classes.error_border
@@ -120,11 +120,11 @@ export default function SignUp() {
         )}
       </div>
       <div className={classes.input_container}>
-        <label htmlFor="passwordConfirm">{t('confirmPassword')}</label>
+        <label htmlFor="passwordConfirm">{addPlaceholder('confirmPassword')}</label>
         <input
           id="passwordConfirm"
           type="password"
-          placeholder={t('confirmYourPassword')}
+          placeholder={addPlaceholder('confirmYourPassword')}
           {...register('passwordConfirm')}
           className={`${classes.input} ${
             errors.passwordConfirm && classes.error_border
@@ -152,17 +152,17 @@ export default function SignUp() {
         }`}
         disabled={!isFormValid()}
       >
-        {t('signUpButton')}
+        {addPlaceholder('signUpButton')}
       </button>
       <p className={classes.sign}>
-        {t('alreadyHaveAccount')}
+        {addPlaceholder('alreadyHaveAccount')}
         <Link
           className={classes.sign_link}
           to={'/auth'}
           state={{ formType: 'signin' }}
         >
           {' '}
-          {t('signInButton')}
+          {addPlaceholder('signInButton')}
         </Link>
       </p>
     </form>

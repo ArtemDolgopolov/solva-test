@@ -9,7 +9,7 @@ export default function Auth() {
   const location = useLocation();
   const navigate = useNavigate();
   const { formType } = location.state || { formType: 'signin' };
-  const { isUserSignIn } = useAppSelector((state) => state.project); // Обратите внимание на правильный путь к вашему состоянию
+  const { isUserSignIn } = useAppSelector((state) => state.project);
 
   useEffect(() => {
     if (isUserSignIn) {

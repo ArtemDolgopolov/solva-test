@@ -4,12 +4,12 @@ import UserPanel from "../UserPanel/UserPanel"
 import classes from './Navigation.module.scss'
 
 export default function Navigation() {
- const { t } = usePlaceholdersContext()
+ const { addPlaceholder } = usePlaceholdersContext()
  const { isUserSignIn } = useAppSelector((state) => state.project)
 
  const currentLinkAppearance = () => {
   const link = isUserSignIn ? '/characters' : '/'
-  const title = isUserSignIn ? t('mainPage') : t('welcomeHeader')
+  const title = isUserSignIn ? addPlaceholder('mainPage') : addPlaceholder('welcomeHeader')
 
   return (
    <NavLink className={classes.nav_link} to={link}>
