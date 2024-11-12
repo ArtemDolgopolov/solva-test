@@ -1,0 +1,82 @@
+.footer_content {
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ user-select: none;
+
+ .text_wrapper {
+   max-width: 10%;
+
+   p {
+     width: 3.5rem;
+   }
+   @media only screen and (min-width: $mobile) {
+     max-width: 8%;
+     p {
+       width: 12em;
+       font-size: 0.4em;
+     }
+   }
+   
+   @media only screen and (min-width: $tablet) and (max-width: $fhd) {
+     max-width: 25%;
+     p {
+       width: 11em;
+       font-size: 0.8em;
+     }
+   }
+   
+   @media only screen and (min-width: $fhd) {
+     max-width: 10%;
+     p {
+       width: 11em;
+       font-size: 0.9em;
+     }
+   }
+ }
+
+ .github_wrapper {
+   display: flex;
+   gap: 2rem;
+   font-size: 1.3em;
+
+   a {
+     transition: all 0.3s ease;
+     color: $font-color;
+
+     &:hover {
+       color: $secondary-font-color;
+     }
+   }
+   @media only screen and (min-width: 320px) {
+     gap: 0.6rem;
+     font-size: 0.4em;
+   }
+   
+   @media only screen and (min-width: $tablet) and (max-width: $fhd) {
+     gap: 0.9rem;
+     font-size: 0.8em;
+   }
+   
+   @media only screen and (min-width: $fhd) {
+     gap: 1rem;
+     font-size: 0.9em;
+   }
+ }
+
+ .year_wrapper {
+   font-size: 1.3em;
+   color: $font-color;
+   @media only screen and (min-width: $mobile) {
+     font-size: 0.4em;
+   }
+   
+   @media only screen and (min-width: $tablet) and (max-width: $fhd) {
+     font-size: 0.8em;
+   }
+   
+   @media only screen and (min-width: $fhd) {
+     font-size: 0.9em;
+   }
+ }
+}

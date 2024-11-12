@@ -1,0 +1,24 @@
+.nav_link {
+ text-decoration: none;
+ color: $font-color;
+ user-select: none;
+
+ transition: all 0.3s ease;
+ &:hover {
+   color: $secondary-color-dim;
+ }
+}
+.container {
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ width: 100%;
+}
+
+.logo_link {
+ display: inline-block;
+ background: no-repeat url('../../assets/img/swapiIcon.svg');
+ background-size: 100%;
+ width: 2rem;
+ height: 1.65rem;
+}

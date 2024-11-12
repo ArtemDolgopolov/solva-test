@@ -1,0 +1,41 @@
+.user_icons_wrapper {
+ display: inline-flex;
+ column-gap: 1rem;
+ justify-content: space-between;
+
+ .user_icon {
+   cursor: pointer;
+   width: 2rem;
+   height: 2rem;
+   background-size: 100%;
+
+   transition: all 0.3s ease;
+   &.icon_signout {
+     background-image: url('../../assets/img/sign-out-alt-2-svgrepo-com.svg');
+   }
+
+   &.icon_signin {
+     background-image: url('../../assets/img/sign-in-svgrepo-com.svg');
+   }
+
+   &.icon_signup {
+     background-image: url('../../assets/img/user-id-svgrepo-com.svg');
+   }
+
+   &:hover {
+     filter: hue-rotate(-75deg);
+   }
+ }
+
+ .current_user {
+   position: absolute;
+   top: 50%;
+   left: 0;
+   transform: translate(-110%, -50%);
+   user-select: none;
+
+   @media (max-width: $tablet) {
+     display: none;
+   }
+ }
+}
